@@ -61,4 +61,6 @@ function playRound(playerSelection, computerSelection){
 
 function playGame() {
 
+    console.log(playRound());
+
 }
