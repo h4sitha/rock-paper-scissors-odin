@@ -61,6 +61,10 @@ function playRound(playerSelection, computerSelection){
 
 function playGame() {
 
-    console.log(playRound());
+    let rounds = 5;
+
+    for (let i=0; i < rounds; i++) {
+        console.log(playRound());
+    }
 
 }
