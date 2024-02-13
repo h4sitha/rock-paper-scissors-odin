@@ -24,6 +24,9 @@ function getComputerChoice() {
 let playerSelection;
 let computerSelection;
 
+let playerWins;
+let computerWins;
+
 function playRound(playerSelection, computerSelection){
 
     playerSelection = prompt("Rock, Paper or Scissors?");
@@ -31,16 +34,22 @@ function playRound(playerSelection, computerSelection){
     computerSelection = getComputerChoice();
 
     if (playerSelection === "ROCK" && computerSelection === "Scissors") {
+        playerWins++;
         return "You Win! Rock beats Scissors";
     } else if (playerSelection === "ROCK" && computerSelection === "Paper") {
+        computerWins--;
         return "You Lose! Paper beats Rock";
     } else if (playerSelection === "PAPER" && computerSelection === "Scissors") {
+        computerWins--;
         return "You Lose! Scissors beats Paper"
     } else if (playerSelection === "PAPER" && computerSelection === "Rock") {
+        playerWins++;
         return "You Win! Paper beats Rock";
     } else if (playerSelection === "SCISSORS" && computerSelection === "Paper") {
+        playerWins++;
         return "You Win! Scissors beats Paper"
     } else if (playerSelection === "SCISSORS" && computerSelection === "Rock") {
+        computerWins--;
         return "You Lose! Rock beats Scissors";
     } else if (playerSelection === computerSelection.toUpperCase()) {
         return `It's a Draw. You both chose ${computerSelection}`;
@@ -62,6 +71,9 @@ function playRound(playerSelection, computerSelection){
 function playGame() {
 
     let rounds = 5;
+
+    playerWins = 0;
+    computerWins = 0;
 
     for (let i=0; i < rounds; i++) {
         console.log(playRound());
