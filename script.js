@@ -37,10 +37,10 @@ function playRound(playerSelection, computerSelection){
         playerWins++;
         return "You Win! Rock beats Scissors";
     } else if (playerSelection === "ROCK" && computerSelection === "Paper") {
-        computerWins--;
+        computerWins++;
         return "You Lose! Paper beats Rock";
     } else if (playerSelection === "PAPER" && computerSelection === "Scissors") {
-        computerWins--;
+        computerWins++;
         return "You Lose! Scissors beats Paper"
     } else if (playerSelection === "PAPER" && computerSelection === "Rock") {
         playerWins++;
@@ -49,7 +49,7 @@ function playRound(playerSelection, computerSelection){
         playerWins++;
         return "You Win! Scissors beats Paper"
     } else if (playerSelection === "SCISSORS" && computerSelection === "Rock") {
-        computerWins--;
+        computerWins++;
         return "You Lose! Rock beats Scissors";
     } else if (playerSelection === computerSelection.toUpperCase()) {
         return `It's a Draw. You both chose ${computerSelection}`;
@@ -78,6 +78,9 @@ function playGame() {
     for (let i=0; i < rounds; i++) {
         console.log(playRound());
     }
+
+    // console.log(playerWins);
+    // console.log(computerWins);
 
     if (playerWins > computerWins) {
         return `You won! You won ${playerWins} games.`;
