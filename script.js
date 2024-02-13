@@ -27,6 +27,8 @@ let computerSelection;
 let playerWins;
 let computerWins;
 
+let rounds;
+
 function playRound(playerSelection, computerSelection){
 
     playerSelection = prompt("Rock, Paper or Scissors?");
@@ -54,6 +56,7 @@ function playRound(playerSelection, computerSelection){
     } else if (playerSelection === computerSelection.toUpperCase()) {
         return `It's a Draw. You both chose ${computerSelection}`;
     } else {
+        rounds++;
         return "Please enter your choice correctly.";
     }
 } 
@@ -70,7 +73,7 @@ function playRound(playerSelection, computerSelection){
 
 function playGame() {
 
-    let rounds = 5;
+    rounds = 5;
 
     playerWins = 0;
     computerWins = 0;
