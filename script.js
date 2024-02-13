@@ -42,8 +42,10 @@ function playRound(playerSelection, computerSelection){
         return "You Win! Scissors beats Paper"
     } else if (playerSelection === "SCISSORS" && computerSelection === "Rock") {
         return "You Lose! Rock beats Scissors";
+    } else if (playerSelection === computerSelection.toUpperCase()) {
+        return `It's a Draw. You both chose ${computerSelection}`;
     } else {
-        return `It's a Draw. You both chose ${computerSelection}`
+        return "Please enter your choice correctly.";
     }
 } 
     
