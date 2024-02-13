@@ -20,7 +20,25 @@ function getComputerChoice() {
     // Get player's and computer's choices and use an if-else statments
     // to compare them to get their winner
     // Use logical operators to check the winner of the round
-        // Players choose Rock and Computer choose Scissors 
+        // Players choose Rock and Computer choose Scissors
+        
+function playRound(playerSelection, computerSelection){
+    if (playerSelection === "ROCK" && computerSelection === "Scissors") {
+        return "You Win! Rock beats Scissors";
+    } else if (playerSelection === "ROCK" && computerSelection === "Paper") {
+        return "You Lose! Paper beats Rock";
+    } else if (playerSelection === "PAPER" && computerSelection === "Scissors") {
+        return "You Lose! Scissors beats Paper"
+    } else if (playerSelection === "PAPER" && computerSelection === "Rock") {
+        return "You Win! Paper beats Rock";
+    } else if (playerSelection === "SCISSORS" && computerSelection === "Paper") {
+        return "You Win! Scissors beats Paper"
+    } else if (playerSelection === "SCISSORS" && computerSelection === "Rock") {
+        return "You Lose! Rock beats Scissors";
+    } else {
+        return `It's a Draw. You both chose ${computerSelection}`
+    }
+} 
     
     // Create two new variable to track player's wins and losses
         // Increment the relevant variable after each round
