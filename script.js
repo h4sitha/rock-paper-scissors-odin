@@ -79,4 +79,12 @@ function playGame() {
         console.log(playRound());
     }
 
+    if (playerWins > computerWins) {
+        return `You won! You won ${playerWins} games.`;
+    } else if (playerWins < computerWins) {
+        return "You lose. Better luck next time!";
+    } else {
+        return "It's a draw.";
+    }
+
 }
