@@ -21,8 +21,15 @@ function getComputerChoice() {
     // to compare them to get their winner
     // Use logical operators to check the winner of the round
         // Players choose Rock and Computer choose Scissors
-        
+let playerSelection;
+let computerSelection;
+
 function playRound(playerSelection, computerSelection){
+
+    playerSelection = prompt("Rock, Paper or Scissors?");
+    playerSelection = playerSelection.toUpperCase();
+    computerSelection = getComputerChoice();
+
     if (playerSelection === "ROCK" && computerSelection === "Scissors") {
         return "You Win! Rock beats Scissors";
     } else if (playerSelection === "ROCK" && computerSelection === "Paper") {
@@ -49,3 +56,7 @@ function playRound(playerSelection, computerSelection){
     // Create a new variable to store the number of rounds
     // Call the above function inside this function to play a round
     // Use a for loop to call the function until the rounds equal to 5
+
+function playGame() {
+
+}
