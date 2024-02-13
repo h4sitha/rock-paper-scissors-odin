@@ -6,6 +6,11 @@
     // Create an array containing the three choices
     // Create a new variable and assign it a random number from 1 to 3
     // Get the computer's choice by using the random number as the index for the array
+function getComputerChoice() {
+    let choices = ["Rock", "Paper", "Scissors"];
+    let randomNum = (Math.floor(Math.random() * 3));
+    return choices[randomNum];
+}
 
 // Rock beats Scissors
 // Scissors beats Paper
