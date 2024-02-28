@@ -29,9 +29,29 @@ let computerWins;
 
 let rounds;
 
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((button) => {
+
+    button.addEventListener("click", (e) => {
+        switch(e.target.id) {
+            case "rock":
+                console.log(playRound("rock"));
+                break;
+            case "paper":
+                console.log(playRound("paper"));
+                break;
+            case "scissors":
+                console.log(playRound("scissors"));
+                break;
+        };
+    })
+
+})
+
 function playRound(playerSelection, computerSelection){
 
-    playerSelection = prompt("Rock, Paper or Scissors?");
+    // playerSelection = prompt("Rock, Paper or Scissors?");
     playerSelection = playerSelection.toUpperCase();
     computerSelection = getComputerChoice();
 
@@ -73,14 +93,14 @@ function playRound(playerSelection, computerSelection){
 
 function playGame() {
 
-    rounds = 5;
+    // rounds = 5;
 
     playerWins = 0;
     computerWins = 0;
 
-    for (let i=0; i < rounds; i++) {
+    // for (let i=0; i < rounds; i++) {
         console.log(playRound());
-    }
+    // }
 
     // console.log(playerWins);
     // console.log(computerWins);
